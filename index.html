@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MorseTraining</title>
+
+    <script src="https://fkurz.net/ham/jscwlib/src/jscwlib.js"></script>
+
+</head>
+<body>
+
+    <div id="player"></div>
+
+    <script>
+
+        let palabras = [
+            "hola",
+            "mundo",
+            "adios",
+            "nave",
+            "avion",
+            "carro",
+            "coche",
+            "moto",
+            "bicicleta",
+        ]
+
+        let palabra = palabras[Math.floor(Math.random() * palabras.length)];
+
+        console.log(palabra);
+
+        var m = new jscw({"wpm": 5});
+        m.setText(palabra);
+        m.renderPlayer('player', m);
+    </script>
+</body>
+</html>
